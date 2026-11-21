@@ -6,7 +6,7 @@
 /*   By: ppodobri <ppodobri@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 18:02:30 by ppodobri          #+#    #+#             */
-/*   Updated: 2026/11/21 20:35:20 by ppodobri         ###   ########.fr       */
+/*   Updated: 2026/11/21 21:01:09 by ppodobri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ char *get_next_line(int fd)
 int main (void)
 {
 	int fd = open("test.txt",O_RDONLY);
-	
-	printf("%s", get_next_line(fd));
+	int i = 0;
+
+	while (i != 2)
+		printf("%s", get_next_line(fd));
 }
