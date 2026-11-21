@@ -6,12 +6,21 @@
 /*   By: ppodobri <ppodobri@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 19:52:28 by ppodobri          #+#    #+#             */
-/*   Updated: 2026/11/04 20:12:06 by ppodobri         ###   ########.fr       */
+/*   Updated: 2026/11/21 20:36:34 by ppodobri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "unistd.h"
+#include <unistd.h>
+#include <fcntl.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+#ifndef BUFFER_SIZE
+# define BUFFER_SIZE 42
 
 char *get_next_line(int fd);
+
+
+#endif
