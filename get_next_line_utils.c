@@ -6,7 +6,7 @@
 /*   By: ppodobri <ppodobri@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 12:33:10 by ppodobri          #+#    #+#             */
-/*   Updated: 2026/11/22 20:14:46 by ppodobri         ###   ########.fr       */
+/*   Updated: 2026/11/23 21:43:57 by ppodobri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char *stash(int fd, ssize_t len, char *buf)
 	static char			*content;
 	static int			bytecount;
 	
-	bytecount += sl(buf);
+	bytecount =+ sl(buf);
 	content = malloc(bytecount);
 	while (*buf != '\n' && *buf != '\0')
 	{
@@ -48,7 +48,7 @@ int sl(char *buf)
 	int	len;
 	
 	len = 0;
-	while (*buf)
+	while (buf[len])
 		len++;
 	return (len);
 }
