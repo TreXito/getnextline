@@ -16,6 +16,7 @@ char *get_next_line(int fd)
 {
 	char	*buf;
 	ssize_t	len;
+	char	*content;
 
 	buf = 0;
 	len = 0;
@@ -26,7 +27,8 @@ char *get_next_line(int fd)
 	if (len < 0)
 		return (free(buf), NULL);
 	buf[len] = '\0';
-	stash(fd, len, buf);
+	content = stash(fd, len, buf);
+	return (content);
 }
 int main (void)
 {

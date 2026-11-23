@@ -35,13 +35,13 @@ char *stash(int fd, ssize_t len, char *buf)
 		return (content);
 	}
 	else
-		stash(fd, len, buf);
+		return (get_next_line(fd));
 }
 
-char *buffering(int fd)
+/*char *buffering(int fd)
 {
 	
-}
+}*/
 
 int sl(char *buf)
 {
