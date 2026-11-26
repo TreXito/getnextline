@@ -6,7 +6,7 @@
 /*   By: ppodobri <ppodobri@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 18:02:30 by ppodobri          #+#    #+#             */
-/*   Updated: 2026/11/22 20:02:14 by ppodobri         ###   ########.fr       */
+/*   Updated: 2026/11/26 01:00:08 by ppodobri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,8 @@ int main (void)
 	int i = 0;
 
 	while (i != 2)
+	{
 		printf("%s", get_next_line(fd));
+		i++;
+	}
 }

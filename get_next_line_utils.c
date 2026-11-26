@@ -6,7 +6,7 @@
 /*   By: ppodobri <ppodobri@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 12:33:10 by ppodobri          #+#    #+#             */
-/*   Updated: 2026/11/24 20:59:33 by ppodobri         ###   ########.fr       */
+/*   Updated: 2026/11/25 21:00:49 by ppodobri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ char *stash(int fd, ssize_t len, char *buf)
 	while (buf[j] != '\n' && buf[j] != '\0')
 	{
 		content[i] = buf[j];
-		buf++;
+		i++;
 		j++;
 	}
-	if (buf[j] == '\n')
+	if (buf[j] == '\n' || buf[0] == '\n' || buf[0] == '\0')
 	{
 		free(buf); 
 		return (content);
