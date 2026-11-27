@@ -6,11 +6,11 @@
 /*   By: ppodobri <ppodobri@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 19:52:28 by ppodobri          #+#    #+#             */
-/*   Updated: 2026/11/23 21:19:35 by ppodobri         ###   ########.fr       */
+/*   Updated: 2026/11/27 21:41:51 by ppodobri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef GET_NEXT_LINE_H
 
 #include <unistd.h>
 #include <fcntl.h>
@@ -19,9 +19,9 @@
 
 #ifndef BUFFER_SIZE
 # define BUFFER_SIZE 42
-
+#endif 
 char *get_next_line(int fd);
-char *stash(int fd, ssize_t len, char *buf);
+char *stash(int fd, char *buf);
 int sl(char *buf);
 
 

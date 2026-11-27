@@ -6,7 +6,7 @@
 /*   By: ppodobri <ppodobri@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 12:33:10 by ppodobri          #+#    #+#             */
-/*   Updated: 2026/11/25 21:00:49 by ppodobri         ###   ########.fr       */
+/*   Updated: 2026/11/27 21:41:46 by ppodobri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int sl(char *buf);
 
 
-char *stash(int fd, ssize_t len, char *buf)
+char *stash(int fd, char *buf)
 {
 	static int			i;
 	int					j;

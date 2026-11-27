@@ -6,7 +6,7 @@
 /*   By: ppodobri <ppodobri@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 18:02:30 by ppodobri          #+#    #+#             */
-/*   Updated: 2026/11/26 01:00:08 by ppodobri         ###   ########.fr       */
+/*   Updated: 2026/11/28 00:15:09 by ppodobri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ char *get_next_line(int fd)
 	if (len < 0)
 		return (free(buf), NULL);
 	buf[len] = '\0';
-	content = stash(fd, len, buf);
+	content = stash(fd, buf);
 	return (content);
 }
-int main (void)
+/*int main (void)
 {
 	int fd = open("test.txt",O_RDONLY);
 	int i = 0;
@@ -41,3 +41,4 @@ int main (void)
 		i++;
 	}
 }
+*/
