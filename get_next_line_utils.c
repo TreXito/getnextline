@@ -6,7 +6,7 @@
 /*   By: ppodobri <ppodobri@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 12:33:10 by ppodobri          #+#    #+#             */
-/*   Updated: 2026/11/27 21:41:46 by ppodobri         ###   ########.fr       */
+/*   Updated: 2026/11/28 20:20:52 by ppodobri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int sl(char *buf);
 
 
-char *stash(int fd, char *buf)
+char *process(int fd, char *buf)
 {
 	static int			i;
 	int					j;
@@ -23,7 +23,7 @@ char *stash(int fd, char *buf)
 	static int			bytecount;
 	
 	j = 0;
-	bytecount =+ sl(buf);
+	bytecount += sl(buf);
 	content = malloc(bytecount);
 	while (buf[j] != '\n' && buf[j] != '\0')
 	{
@@ -33,17 +33,17 @@ char *stash(int fd, char *buf)
 	}
 	if (buf[j] == '\n' || buf[0] == '\n' || buf[0] == '\0')
 	{
-		free(buf); 
+		free(buf);
 		return (content);
 	}
 	else
 		return (get_next_line(fd));
 }
 
-/*char *buffering(int fd)
+char *stash(char *buf,)
 {
-	
-}*/
+		
+}
 
 int sl(char *buf)
 {
